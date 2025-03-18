@@ -1,13 +1,19 @@
-function calcular(){
-    let num = 0;
-    let num1 = 1;
-    let num2 = 2;
-    let num3 = 3;
-    let num4 = 4;
-    let num5 = 5;
-    let num6 = 6;
-    let num7 = 7;
-    let num8 = 8;
-    let num9 = 9;
-    
+function apende(value){
+    const display = document.getElementById("display");
+    display.value += value;
+}
+
+function limpar(){
+    const display = document.getElementById("display");
+    display.value = "";
+}
+
+function calcular_resultado(){
+    const display = document.getElementById("display");
+    try {
+        display.value = eval(display.value.replace('x', 'X').replace('÷', '/'));
+    }
+    catch {
+        display.value = "Erro";
+    }
 }
