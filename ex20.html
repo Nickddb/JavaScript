@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PRIMO</title>
 </head>
 <body>
-    
+    <label for="n">Entre com um número</label>
+    <input type="number" id="n">
+    <button onclick="verificar()">Verificar</button>
+    <p id="primo"></p>
+
+    <script>
+        function verificar(){
+            let n = document.getElementById("n").value;
+            um = n / 1;
+            metade = n / 2;
+            proprio = n / n;
+                if (um !== n && proprio !== 1){
+                    primo.textContent = "Não é primo";
+                }
+                else{
+                    primo.textContent = "É primo";
+                }
+        }
+    </script>
 </body>
 </html>
