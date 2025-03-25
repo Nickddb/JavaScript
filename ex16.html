@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEGATIVO E POSITIVO</title>
+</head>
+<body>
+    <label for="num">Digite um número: </label>
+    <input type="number" id="num">
+    <button onclick="verificar()">Verificar</button>
+    <p id="analise"></p>
+    <script>
+        function verificar(){
+            let num = document.getElementById("num").value;
+            let analise = document.getElementById("analise");
+
+            if (num < 0){
+                analise.textContent = "Número negativo";
+            }
+            else if(num == 0){
+                analise.textContent = "Neutro";
+            }
+            else{
+                analise.textContent = "Número positivo";
+            }
+        }
+    </script>
+</body>
+</html>
