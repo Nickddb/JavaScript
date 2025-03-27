@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING MAIUSCULA</title>
+</head>
+<body>
+    <label for="frase">Digite uma frase: </label>
+    <input type="text" id="frase"> <br>
+    <button onclick="mudar(frase.value)">Mudar</button>
+    <p id="alterar"></p>
+
+    <script>
+        const mudar = (str) => {
+            alterar.textContent = "Maiúsculo: " + str.toUpperCase();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY PAR</title>
+</head>
+<body>
+    <label for="num">Digite os números, separados por vígula: </label>
+    <input type="text" id="num">
+    <button onclick="pares(num.value)">Filtrar</button>
+    <p id="filtrar"></p>
+
+    <script>
+        const pares = (num) => {
+            let numeros = num.split(",");
+            let par = "";
+            for(let i = 0; i <= numeros.length; i++){
+                if(numeros[i] % 2 === 0){
+                    par += numeros[i] + " , "
+                }
+                if (par == ""){
+                    filtrar.textContent = "Não há números pares";
+                }
+                else{
+                    filtrar.textContent = "Números pares: " + par;
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
