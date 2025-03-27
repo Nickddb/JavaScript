@@ -8,6 +8,19 @@
 <body>
     <label for="n">Digite um número</label>
     <input type="number" id="n">
-    <button>Ver fatorial</button>
+    <button onclick="calcular()">Ver fatorial</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcular(){
+            let n = document.getElementById("n").value;
+            let calculo = 1;
+            for (let i = 1; i <= n; i++){
+                calculo *= i;
+            }
+            document.getElementById("resultado").textContent = "Fatorial do número " + n + " = " + calculo;
+        }
+    </script>
 </body>
 </html>

@@ -14,15 +14,15 @@
     <script>
         function verificar(){
             let n = document.getElementById("n").value;
-            um = n / 1;
-            metade = n / 2;
-            proprio = n / n;
-                if (um !== n && proprio !== 1){
-                    primo.textContent = "Não é primo";
+            let primo = n > 1;
+            for(let i = 2; i < n; i++){
+                if (n % i == 0){
+                    primo = false;
+                    break;
                 }
-                else{
-                    primo.textContent = "É primo";
-                }
+            }
+            let resultado = primo ? "É primo" : "Não é primo";
+            document.getElementById("primo").textContent = resultado;
         }
     </script>
 </body>
