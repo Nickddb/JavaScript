@@ -6,6 +6,25 @@
     <title>CONTAR</title>
 </head>
 <body>
-    
+    <label for="frase">Digite uma frase: </label>
+    <input type="text" id="frase"> <br>
+    <label for="letra">Entre com a letra: </label>
+    <input type="text" id="letra"> <br>
+    <button onclick="contar()">Contar</button>
+    <p id="quantidade"></p>
+
+    <script>
+        function contar(){
+            let frase = document.getElementById("frase").value.toLowerCase();
+            let letra = document.getElementById("letra").value.toLowerCase();
+            let contador = 0;
+            for(let i = 0; i < frase.length; i++){
+                if (frase[i] === letra) {
+                    contador++;
+                }
+            }
+            document.getElementById("quantidade").textContent = "A letra '" + letra + "' aparece " + contador + " vezes :3";
+        }
+    </script>
 </body>
 </html>

@@ -6,6 +6,23 @@
     <title>MÉDIA</title>
 </head>
 <body>
-    
+    <label for="num">Entre com os números (Separar por vírgula!): </label>
+    <input type="number" id="num">
+    <button onclick="calcular()">Calcular média</button>
+    <p id="media"></p>
+
+    <script>
+        function calcular(){
+            let num = document.getElementById("num").value;
+            let arrayÚmÙ = num.split(","); //array de substring
+            let soma = 0;
+            let total = arrayÚmÙ.length;
+            for (let i = 0; i < total; i++){
+                soma += parseFloat(arrayÚmÙ[i]);
+            }
+            let media = soma / total;
+            document.getElementById("media").textContent = "Média: " + media;
+        }
+    </script>
 </body>
 </html>
