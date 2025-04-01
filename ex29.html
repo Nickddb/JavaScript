@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHILE IMPAR</title>
+</head>
+<body>
+    <h1>NÚMEROS PARES ENTRE 1 E 10</h1>
+    <div id="par"></div>
+
+    <script>
+        let pardiv = document.getElementById("par");
+        let numpar = "";
+        let contador = '';
+
+        while(contador < 10){
+            if (contador % 2 == 0) {
+                numpar += contador + "<br>";
+            }
+            contador++;
+        }
+        pardiv.innerHTML = numpar;
+    </script>
+</body>
+</html>
