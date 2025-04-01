@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUM IMPAR</title>
+</head>
+<body>
+    <h1>NÚMEROS ÍMPARES ENTRE 1 E 10:</h1>
+    <div id="impar"></div>
+
+    <script>
+        let impardiv = document.getElementById("impar");
+        let numimpar = "";
+        for(let i = 0; i <= 10; i++){
+            if (i % 2 == 1) {
+                numimpar += i + "<br>";
+            } else {
+                
+            }
+        }
+        impardiv.innerHTML = numimpar;
+    </script>
+</body>
+</html>
