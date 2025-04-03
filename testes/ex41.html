@@ -11,23 +11,22 @@
     <label for="string">Digite as strings (separar com vírgula): </label>
     <div><input type="text" id="string"></div>
     <br>
-    <button onclick="retornar(string)">Retornar a mais longa</button>
+    <button onclick="retornar()">Retornar a mais longa</button>
     <p id="longa"></p>
 
     <script>
         function retornar(){
             let string = document.getElementById("string").value;
-            let separar_string = string.split(",");
+            let separar_string = string.split(",").map(str => str.trim);
             let tamanho = separar_string.map(str => str.length);
 
-            for(let i = 0; i < separar_string; i++){
-                if(tamanho[i] > tamanho[i]){
-                maior = 0;
-                maior = contator + tamanho;
+            let maior = tamanho[0];
+            for(let i = 1; i < tamanho; i++){
+                if(tamanho[i] > maior){
+                    maior = tamanho[i];
                 }
             }
-
-            document.getElementById("longa").innerText = "Maior string: " + maior.join(", ");
+            document.getElementById("longa").innerText = "Maior string: " + maior;
 
         }
 
