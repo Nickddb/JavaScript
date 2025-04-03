@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMA</title>
+</head>
+<body>
+    <h1>Soma de todos os elementos pares</h1>
+    <label for="numeros">Digite os números, separados por vírgula: </label>
+    <input type="number" id="numeros">
+    <button onclick="soma()">Calcular soma</button>
+    <p id="calculo"></p>
+
+    <script>
+        function soma(){
+            let numeros = document.getElementById("numeros").value;
+            let array_par = numeros.split(",");
+            let calculo = 0;
+            let quantidade = array_par.length;
+
+            for (let i = 0; i < quantidade; i++){
+                if (array_par % 2 == 0){
+                    calculo = calculo + array_par;
+                }
+            }
+
+            document.getElementById("calculo").textContent = "Soma: " + calculo;
+        }
+    </script>
+    
+</body>
+</html>
