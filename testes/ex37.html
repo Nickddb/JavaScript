@@ -8,7 +8,7 @@
 <body>
     <h1>Soma de todos os elementos pares</h1>
     <label for="numeros">Digite os números, separados por vírgula: </label>
-    <input type="number" id="numeros">
+    <input type="text" id="numeros">
     <button onclick="soma()">Calcular soma</button>
     <p id="calculo"></p>
 
@@ -20,8 +20,8 @@
             let quantidade = array_par.length;
 
             for (let i = 0; i < quantidade; i++){
-                if (array_par % 2 == 0){
-                    calculo = calculo + array_par;
+                if (array_par[i] % 2 == 0){
+                    calculo += parseFloat(array_par[i]);
                 }
             }
 
