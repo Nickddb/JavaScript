@@ -11,18 +11,14 @@
     <label for="estringue">Digite algo, qualquer coisa, separada por vírgula: </label>
     <input type="text" id="estringue">
     <button onclick="retornar()">Retornar o valor</button>
-    <p id="valor"></p>=- 567 
+    <p id="valor"></p>
     <script>
         function retornar(){
             let estringue = document.getElementById("estringue").value;
-            let array_string = estringue.split(",");
-            let valor = array_string.length;
-            let array_valor = [];
+            let separa = estringue.split(",").map(str => str.trim());
+            let tamanho = separa.map(str => str.length);
 
-            for(i = 0; i < valor; i++){
-                document.getElementById("estringue").textContent = estringue[i] + " = " + valor + "caracteres";
-               
-            }
+            document.getElementById("valor").innerText = "Tamanho de caracteres: " + tamanho.join(", ");
         }
     </script>
 </body>
