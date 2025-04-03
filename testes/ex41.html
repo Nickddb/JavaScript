@@ -3,33 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STRING LONGA</title>
+    <title>MAIOR NUM</title>
 </head>
 <body>
-    <h1>Implemente uma função que receba um array de strings e retorne a string mais longa</h1>
-
-    <label for="string">Digite as strings (separar com vírgula): </label>
-    <div><input type="text" id="string"></div>
-    <br>
-    <button onclick="retornar()">Retornar a mais longa</button>
-    <p id="longa"></p>
-
-    <script>
-        function retornar(){
-            let string = document.getElementById("string").value;
-            let separar_string = string.split(",").map(str => str.trim);
-            let tamanho = separar_string.map(str => str.length);
-
-            let maior = tamanho[0];
-            for(let i = 1; i < tamanho; i++){
-                if(tamanho[i] > maior){
-                    maior = tamanho[i];
-                }
-            }
-            document.getElementById("longa").innerText = "Maior string: " + maior;
-
-        }
-
-    </script>
+    <h1>Escreva uma função que receba um array de números e retorne o maior número encontrado.</h1>
 </body>
 </html>
